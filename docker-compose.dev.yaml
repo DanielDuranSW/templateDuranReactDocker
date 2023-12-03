@@ -9,7 +9,7 @@ services:
       - ./client:/client
       - node_modules:/client/node_modules/
     ports:
-      - "3000:3000"
+      - "8000:8000"
     environment:
       - NODE_ENV=development
 volumes:
