@@ -1,6 +1,6 @@
 # {process.env.NODE_ENV} to know in the components if we are in development or production
 # FROM node:alpine AS build
-FROM node:20:10 AS build
+FROM node:20.10 AS build
 WORKDIR /client
 COPY package.json .
 RUN npm i
