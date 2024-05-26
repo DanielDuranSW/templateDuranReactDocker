@@ -1,6 +1,14 @@
 version: "3.8"
 
 services:
+  mongo:
+    image: mongo
+    container_name: my-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+
   # server:
   #   image: server-i
   #   build:
@@ -13,6 +21,11 @@ services:
   #     - "5000:5000"
   #   environment:
   #     - NODE_ENV=development
+
   client:
     build:
       context: ./client
+
+volumes:
+  mongodb-data:
+    driver: local
